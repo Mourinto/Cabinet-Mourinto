@@ -30,6 +30,7 @@ class DocsController < ApplicationController
       redirect_to @doc
     else
       render 'edit'
+      Rails.logger.info(@doc.errors.inspect)
     end
   end
 
@@ -41,7 +42,7 @@ class DocsController < ApplicationController
   private
 
   def find_doc
-    @doc = Doc.find(params[:id])
+    @doc = current_user.docs.find(params[:id])
   end
 
   def doc_params
