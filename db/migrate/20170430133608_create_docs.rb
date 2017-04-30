@@ -3,7 +3,6 @@ class CreateDocs < ActiveRecord::Migration[5.1]
     create_table :docs do |t|
       t.string :title
       t.text :content
-
       t.timestamps
     end
   end

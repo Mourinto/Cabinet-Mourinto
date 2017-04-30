@@ -12,6 +12,7 @@ gem 'devise', git: 'https://github.com/gogovan/devise.git', branch: 'rails-5.1'
 gem 'erubis'
 gem 'simple_form'
 gem 'haml'
+gem 'bcrypt', platforms: :ruby, git: 'https://github.com/codahale/bcrypt-ruby.git', require: 'bcrypt'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server
