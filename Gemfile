@@ -14,7 +14,11 @@ gem 'simple_form'
 gem 'haml'
 gem 'bcrypt', platforms: :ruby, git: 'https://github.com/codahale/bcrypt-ruby.git', require: 'bcrypt'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: [:development, :test]
+group :production do
+  gem 'thin'
+  gem 'pg'
+end
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
